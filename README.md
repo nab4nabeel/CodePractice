@@ -1,2 +1,2 @@
 # CodingPractice
- Data to be stored on Github
+ All the coding practice data to be stored on Github
