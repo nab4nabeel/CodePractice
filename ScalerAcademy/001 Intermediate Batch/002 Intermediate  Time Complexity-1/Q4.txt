@@ -1,0 +1,6 @@
+Q4. Time-Complexity-6
+
+
+The complexity of Binary search algorithm is
+
+O(log n)

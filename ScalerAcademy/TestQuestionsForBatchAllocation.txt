@@ -1,0 +1,59 @@
+Problem Description:
+You are given an array of integers A of Size N.
+Return the difference between the maximum amoung all even numbers of A and the minimum among all odd numbers in A
+
+Problem Constrains
+2<=N<=1e5
+-1e9<=A[i]<=1e9
+There is atleast 1 odd and 1 even number in A
+
+
+======================================================================
+
+Problem:
+You are given two character strings A and B
+You have to find the first occurance of String B in String A, as a substring and return the starting position of first occurance.
+A sibstring is a contiguoys sequence of characters with a string. For e.g "at" is a substring in "catalogue"
+
+======================================================================
+
+Problem:
+Given two integers A and B, find a number X such that A xor X is minimum possible and the number of set bits in X equals B
+
+0<= A <= 10^9
+0<= B <= 30
+
+A=3 B=3 o/p 7
+A=15 B=2 o/p 12
+
+======================================================================
+
+
+Problem:
+Mohit and Akshat are great fans of even numbers and they have A number of apples with them. They want to divide the apples in such a way that each of the two gets positive even number of apples, at the same time both should have unequal numbers of apples. The boys are extremely tired and want to start their meal as soon as possible, that's why you shoild help them find out if they can divide in that way they want
+
+i/p 8 o/p 1
+
+i/p 4 o/p 0
+
+i/p 5 o/p 0
+
+
+======================================================================
+
+Problem:
+Given an array of integers find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1<index2. Please note that your returned answers (both index1 and index2) are not zero-based. Put both these nubers in order in an array and return the array from your function(Looking at the function signature will make things clear). Note that, if no pair exists, return empty list.
+
+If multiple solutions exist, output the one where index 2 is minimum. If there are miltiple solutions with the minimum index2, choose the one with minimum index1 out of them.
+
+
+Input: [2,7,11,15], target=9
+Output: index=1, index2 =2
+
+======================================================================
+
+Problem:
+Joker has attacket Gotham city. our saviour batman has been captured and it is upto you to save the city.
+You break 

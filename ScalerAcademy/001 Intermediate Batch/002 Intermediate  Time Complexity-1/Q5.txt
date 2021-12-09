@@ -1,0 +1,7 @@
+Q5. Time-Complexity-8
+
+If for an algorithm time complexity is given by O(1) then complexityof it is:
+
+Ans: constant
+ 
+

@@ -1,0 +1,17 @@
+Q3. Time-Complexity-5
+
+What is the time complexity of following code:
+ 
+int a = 0, i = N; 
+while (i > 0) { 
+    a += i; 
+    i /= 2; 
+}
+
+Solution Approach
+
+We have to find the smallest x such that N / 2^x N
+x = log(N)
+
+
+Ans: O(log N)

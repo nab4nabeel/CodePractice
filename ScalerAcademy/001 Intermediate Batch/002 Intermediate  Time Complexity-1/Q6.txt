@@ -1,0 +1,7 @@
+Q6. Time-Complexity-9
+
+If for an algorithm time complexity is given by O(log2n) then complexity will:
+
+Solution Approach
+
+Explanation: The growth rate of that function will be logarithmic therefore complexity will be logarithmic.
