@@ -1,0 +1,12 @@
+Q5. Time-Complexity-7
+
+To measure Time complexity of an algorithm Big O notation is used which:
+
+
+characterises a function based on growth of function
+describes limiting behaviour of the function
+all of the mentioned
+upper bound on growth rate of the function
+
+
+Ans: all of the mentioned

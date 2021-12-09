@@ -1,0 +1,24 @@
+Q5. Time Complexity Easy 02
+
+What is the Time Complexity of following snippet ?
+
+for (i = 0; i < N; i++) { 
+  for (j = i; j < N; j++) { 
+     break; 
+  }
+}
+
+
+Ans: O(N)
+
+
+Solution Approach
+
+The inner loop is not running completely. So complexity will depend on the outer one.
+
+
+
+Complete Solution
+
+Here for every i the inner loop will run for only one iteration as we have break out of inner loop. So the complexity is the number of times outer loop will run.
+That is N so complexity is O(N).

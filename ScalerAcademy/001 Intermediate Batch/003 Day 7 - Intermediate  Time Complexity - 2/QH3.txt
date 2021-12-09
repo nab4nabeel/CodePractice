@@ -1,0 +1,23 @@
+Q3. Time Complexity - 9
+
+What is the time complexity of the following code snippet?
+
+int i = 0;
+while(i*i <= N){
+   for(int j = 0; j <= N; j++){
+      for(int k = 0; k <= N; k++,i++){
+         //O(1) operation
+      }
+   }
+   i++;
+}
+
+Ans: O(N^2)
+
+
+Complete Solution
+
+The nested for loop will have time complexity of O(N^2) and as during the loop run it also increments the variable i greater sqrt(N) the while will stop after the nested loop stops.Hence final time complexity will be O(N^2)
+
+
+Hence i will be greater than n after for loops are executed as in k loop i is also incremented

@@ -1,0 +1,19 @@
+Q4. Time Complexity-iii
+
+What is the time complexity of the following code snippet?
+
+for(int i = 0; i < n; i++){
+
+    for(int j = i - 1; j >= 0; j++){
+
+            ans += i + j ;
+
+    }
+
+}
+
+Ans: Code will run indefinitely
+
+Complete solution
+
+Since the end of the loop is set 0 and its start is i-1 and variable j is increased rather than decreasing , j will always be greater or equal to 0

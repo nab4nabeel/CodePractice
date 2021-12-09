@@ -1,0 +1,21 @@
+Q6. Time Complexity Easy 01
+
+
+What is the Time Complexity of following snippet ?
+
+int count =0;
+while(N){
+    count++;
+    N/=3;
+}
+
+Ans: O(log(N)) {Base 3}
+
+
+Complete Solution
+
+We have to find k such that,
+N/(3^k) = 0
+We will approx it to, N/(3^k) = 1
+Or, N = 3^k
+Taking log we will get k=logN where base is 3.

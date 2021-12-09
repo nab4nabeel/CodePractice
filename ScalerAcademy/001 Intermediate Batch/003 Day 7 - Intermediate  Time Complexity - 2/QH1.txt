@@ -1,0 +1,17 @@
+Q1. Time Complexity - 10
+
+What is the time complexity of the following code snippet?
+
+
+for (int i = 3 ; i < n / 3  ;  i += 3) {
+    for(int j = 2 ; j < n / 2 ; j += 2){
+        // O(1) operation  
+    }
+}
+
+Ans: O(n^2)
+
+
+Complete Solution
+
+Even though the first loop is increased by 3 and ends at n/3 ,and the inner loop is incresed by 2 and end at n/2 , the big-O runtime doen’t consider constants . Hence the overall time complexity will be O(N^2)

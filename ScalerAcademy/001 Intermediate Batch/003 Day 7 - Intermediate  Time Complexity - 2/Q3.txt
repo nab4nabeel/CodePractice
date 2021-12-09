@@ -1,0 +1,33 @@
+Q3. NESTED_CMPL3
+
+What is time complexity of following code :
+
+        int count = 0;
+        for (int i = N; i > 0; i /= 2) {
+            for (int j = 0; j < i; j++) {
+                count += 1;
+            }
+        }
+
+
+Ans: O(N)
+
+
+Complete Solution
+
+In the first iteration, the j loop runs N times.
+
+In the second iteration, the j loop runs N / 2 times. 
+
+In the ith iteration, the j loop runs N / 2^i times. 
+
+So, the total number of runs of loop = N + N / 2 + N / 4 + ... 1 
+
+= N + N / 2 + N / 4 + ... 1 
+= N ( 1 + 1/2 + 1/4 + 1/8 + ... ) 		[G.P = ( 1 + 1/2 + 1/4 + 1/8 + ... ) Total number of terms = log2 N]
+= N ( 1(1-(1/2)^log n)/(1-(1/2)))		[sum of G.P = a(1-r^n)/(1-r)]
+= 2N (1 - (1/2^log n))					[Move Denominator 2 to left]
+= 2N (1 - 1/N)							[2^log n = N]
+= 2(N -1)								 2 * N** 
+
+T.C = O(N)
