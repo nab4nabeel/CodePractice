@@ -37,7 +37,7 @@ S.C = O(1)
 
 Carry Forward:
 
-Idea 1: Iterate from left to right when we find 'g' increase counter then when we find 'a' upadate answer with 'g' count
+Idea 1: Iterate from right to left when we find 'g' increase counter then when we find 'a' upadate answer with 'g' count
 
 Ex1:
 
@@ -69,7 +69,7 @@ T.C = O(N)
 S.C = O(1)
 
 
-Idea 2: Iterate from right to left when we find 'g' get the number of 'a' to the left update the answer 
+Idea 2: Iterate from left to right when we find 'g' get the number of 'a' to the left update the answer 
 
 Ex1:
 
@@ -116,8 +116,8 @@ public class C1 {
 		
 		System.out.println("S: " + Arrays.toString(S));
 		System.out.println("Number of Pairs using brute Force method: " + bruteForce(S,N));
-		System.out.println("Number of Pairs using Carry Forward left to right: " + carryForwardLeftRight(S,N));
 		System.out.println("Number of Pairs using Carry Forward right to left: " + carryForwardRightLeft(S,N));
+		System.out.println("Number of Pairs using Carry Forward left to right: " + carryForwardLeftRight(S,N));
 				
 	}   
 	
@@ -136,7 +136,7 @@ public class C1 {
 	}	
 	
 	
-	private static int carryForwardLeftRight(char[] S, int N){
+	private static int carryForwardRightLeft(char[] S, int N){
 		int c=0, ans=0;
 		for(int i=N-1;i>=0;i--){
 			if(S[i]=='g'){
@@ -148,7 +148,7 @@ public class C1 {
 		return ans;
 	}
 	
-	private static int carryForwardRightLeft(char[] S, int N){
+	private static int carryForwardLeftRight(char[] S, int N){
 		int c=0, ans=0;
 		for(int i=0;i<N;i++){
 			if(S[i]=='a'){
@@ -168,8 +168,8 @@ Output:
 
 S: [a, d, g, a, g, a, g, f, g]
 Number of Pairs using brute Force method: 9
-Number of Pairs using Carry Forward left to right: 9
 Number of Pairs using Carry Forward right to left: 9
+Number of Pairs using Carry Forward left to right: 9
 
 
  */
