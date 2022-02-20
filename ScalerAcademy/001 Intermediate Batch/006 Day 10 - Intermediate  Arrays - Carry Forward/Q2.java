@@ -1,6 +1,6 @@
 /* 
 
-Q2. Closest MinMax
+Q2. Closest MinMax (Video)
 
 
 Problem Description
