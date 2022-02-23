@@ -2,7 +2,7 @@
 
 /* 
 
-Square matrix
+Square matrix Boundary printing
 
 Q) Given a Square matrix mat[n][n] print boundaries in clock wise direction
 	

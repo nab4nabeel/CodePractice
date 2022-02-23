@@ -2,7 +2,7 @@
 
 /* 
 
-Square matrix
+Square matrix Spiral printing
 
 Q) Given a Square matrix mat[n][n] Spiral print values of matrix in clock wise direction
 	
@@ -115,7 +115,9 @@ public class C7{
 			}
 			i++;j++;n=n-2;
 		}
-		System.out.print(A[i][j] + "\t");
+		if(n%2==1){
+			System.out.print(A[i][j] + "\t");
+		}
 				
 	}
 }
