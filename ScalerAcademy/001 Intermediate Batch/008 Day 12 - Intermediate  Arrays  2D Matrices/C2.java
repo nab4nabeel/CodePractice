@@ -6,6 +6,8 @@ Q) Given a Square matrix mat[n][n] print diagnols:
 	Top-left>bottom-right
 	Top-right>bottom-left
 	
+All Squares are Rectangles as well
+
 -----------------------------
 Top-left>bottom-right
 	
