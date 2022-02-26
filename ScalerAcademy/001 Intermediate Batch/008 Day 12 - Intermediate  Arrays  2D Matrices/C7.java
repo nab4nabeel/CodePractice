@@ -96,7 +96,7 @@ public class C7{
 		System.out.println("\nPrinting Values of matrix in a spiral manner for Matrix of row: " + n +" and columns: " + m +"\n");
 		
 		int i=0,j=0;
-		while(n>2){
+		while(n>=2){
 			for(int k=1;k<n;k++){
 				System.out.print(A[i][j] + "\t");
 				j++;
