@@ -50,7 +50,7 @@ N-1,0	....		N-1,N-1
 Pseudocode:
 
 (i,j)=(0,0)
-while(N>0){
+while(N>1){
 	for(k=1;k<n;k++){//to iterate N-1 times
 		print(mat[i][j]);
 		j++;
@@ -96,7 +96,7 @@ public class C7{
 		System.out.println("\nPrinting Values of matrix in a spiral manner for Matrix of row: " + n +" and columns: " + m +"\n");
 		
 		int i=0,j=0;
-		while(n>=2){
+		while(n>1){
 			for(int k=1;k<n;k++){
 				System.out.print(A[i][j] + "\t");
 				j++;

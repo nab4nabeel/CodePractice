@@ -95,6 +95,7 @@ Cant be optimized as it needs to be print all the values
 
  */
  
+ 
 import java.io.*;
 import java.util.*;
 
@@ -105,14 +106,14 @@ public class C1{
 		int[] ar = {2,8,9};
 		int N = ar.length;
 		
-		system.out.println("All the subarrays of given array"+ ar.toString());
+		System.out.println("All the subarrays of given array"+ Arrays.toString(ar));
 		
 		for(int i=0;i<N;i++){//starting index
 			for	(int j=i;j<N;j++){//loop till from index N-1
 				for	(int k=i;k<=j;k++){// k to print [i j]sub array
-						system.out.println(ar[k]"\t");
+						System.out.print(ar[k]+"\t");
 				}
-				system.out.println("\n");
+				System.out.print("\n");
 			}
 		}	 
 		
@@ -123,13 +124,18 @@ public class C1{
 
 Output:
 
-All the subarrays of given array: [2, 8, 9]
+All the subarrays of given array[2, 8, 9]
 2	
+
 2	8	
+
 2	8	9	
+
 8	
+
 8	9	
-9	
+
+9		
 
 
  */
