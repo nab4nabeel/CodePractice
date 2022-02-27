@@ -1,50 +1,44 @@
 /* 
 
-Q2) Max consecutive 1's (atmost replace a single 0)
+Q2) Max consecutive 1's (atmost swap a single 0)
 
-Given a binarry array we can atmost replace a single 0 with 1 find max consecutive 1's we can get
+Given a binarry array we can atmost swap a single 0 with 1 find max consecutive 1's we can get
 
 Ex:
 
 1)
 
-0 1 1 1 0 1 1 0 1 1 0
-^
-1 1 1 1 0 1 1 0 1 1 0	>4
+1 1 0 1 1 0 1
+	^
+1 1 1 1 1 0 0	>5
 -------
-0 1 1 1 0 1 1 0 1 1 0
-		^
-0 1 1 1 1 1 1 0 1 1 0	>6
--------
-0 1 1 1 0 1 1 0 1 1 0
-			  ^
-0 1 1 1 0 1 1 1 1 1 0	>5
--------
-0 1 1 1 0 1 1 0 1 1 0
-					^
-0 1 1 1 0 1 1 0 1 1 1	>3
+1 1 0 1 1 0 1
+		  ^	
+1 1 0 1 1 1 1	>4
 
-Max=>6
+Max=>5
+
+1 1 0 1 0 1 0 1 1
+    ^
+1 1 1 1 0 1 0 1 0	>4
+-------
+1 1 0 1 0 1 0 1 1
+        ^
+1 1 0 1 1 1 0 1 0	>3
+-------
+1 1 0 1 0 1 0 1 1
+			^
+0 1 0 1 0 1 1 1 1	>4
+
+Max=>4
 
 
 ********************************************
 
-Brute force:
-
-ans=0;
-(i=0;i<n;i++){
-	if A[i]==0{
-		l = No of consecutive 1's on left
-		r = No of consecutive 1's on right
-		t=l+r+1;
-		ans=max(t,ans)
-	}
-}
-
 Pseudo code:
 
 Iterate and get no of 1's
-if(noI == n){
+if(count1 == n){
 	return n;
 }
 ans=0;
@@ -60,8 +54,11 @@ ans=0;
 			if(A[j]==1){r++}
 			else{break;}
 		}
-		t=l+r+1;
-		ans=max(t,ans)
+		if(count1 > l+r){// I can spare extra 1
+			ans = max(ans, l+r+1)
+		}else{
+			ans = max(ans, l+r)
+		}
 	}
 }
 
@@ -84,19 +81,25 @@ public class C1{
 		int[] A = {0,1,1,1,0,1,1,0,1,1,0};
 		int n = A.length;
 		
-		System.out.println("\nwe can atmost replace a single 0 with 1 find max consecutive 1's  "+ Arrays.toString(A));
+		System.out.println("\nwe can atmost swap a single 0 with 1 find max consecutive 1's  "+ Arrays.toString(A));
 		System.out.println(getMaxConse1(A,n));
+		
+		int[] B = {1,1,0,1,0,1,0,1,1};
+		System.out.println("\nwe can atmost swap a single 0 with 1 find max consecutive 1's  "+ Arrays.toString(B));
+		System.out.println(getMaxConse1(B,B.length));
+		
+		
 	
 	}
 	
 	public static int getMaxConse1(int[] A, int n){
-		int counti=0;
+		int count1=0;
 		for(int i=0;i<n;i++){
 			if(A[i]==1){
-				counti++;
+				count1++;
 			}
 		}
-		if(counti == n){
+		if(count1 == n){
 			return n;
 		}
 		int ans=0;
@@ -117,8 +120,11 @@ public class C1{
 					break;
 				}
 			}
-			int total = l+r+1;
-			ans = Math.max(total,ans);
+			if(count1 > l+r){
+				ans = Math.max(ans, l+r+1);
+			}else{
+				ans = Math.max(ans, l+r);
+			}
 		}
 		return ans;
 	}
@@ -126,8 +132,11 @@ public class C1{
 
 /* 
 
-we can atmost replace a single 0 with 1 find max consecutive 1's  [0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0]
+we can atmost swap a single 0 with 1 find max consecutive 1's  [0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0]
 6
+
+we can atmost swap a single 0 with 1 find max consecutive 1's  [1, 1, 0, 1, 0, 1, 0, 1, 1]
+4
 
 
  */
