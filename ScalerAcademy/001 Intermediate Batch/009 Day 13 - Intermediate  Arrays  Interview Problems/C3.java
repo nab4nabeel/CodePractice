@@ -18,6 +18,8 @@ Ex:
 
 Max=>5
 
+2)
+
 1 1 0 1 0 1 0 1 1
     ^
 1 1 1 1 0 1 0 1 0	>4
@@ -29,10 +31,19 @@ Max=>5
 1 1 0 1 0 1 0 1 1
 			^
 0 1 0 1 0 1 1 1 1	>4
+          <--  -->
+ans=left+right+1 //+1 as we have additional 1 to add in remaining array
 
 Max=>4
 
+3)
+1 1	1 0 1 1 1
+	  ^
+1 1 1 1 1 1 0
+<----   -->
+ans= left+right //we dont have additional 1 to add in remaining array hence left+right
 
+	  
 ********************************************
 
 Pseudo code:
